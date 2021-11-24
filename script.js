@@ -125,7 +125,9 @@ $(document).ready(function() {
       var taskTitle = $(this).find('[name="title"]').val();
       var taskContent = $(this).find('[name="content"]').val();
 
+
       var requestUrl = apiRoot + 'tasks';
+
 
       $.ajax({
          url: requestUrl,
@@ -166,7 +168,9 @@ $(document).ready(function() {
    }
 
    function handleCardCreationRequest(event) {
+
       var requestUrl = trelloApiRoot + 'cards';
+
       var $relatedTaskRow = $(event.target).parents('[data-task-id]');
       var relatedTaskId = $relatedTaskRow.attr('data-task-id');
       var relatedTask = availableTasks[relatedTaskId];
